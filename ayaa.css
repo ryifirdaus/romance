@@ -1,0 +1,50 @@
+/* styles.css */
+body {
+    background-color: #ffcccb; /* Warna latar belakang pink */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Mencegah scrollbar */
+}
+
+.container {
+    position: relative; /* Agar elemen bisa diposisikan relatif terhadap container */
+    text-align: center;
+}
+
+.heart {
+    font-size: 50px;
+    position: absolute; /* Agar bisa dipindahkan */
+    animation: moveHeart 2s infinite alternate; /* Animasi bergerak */
+}
+
+#heart-left {
+    left: 20%; /* Posisi hati di kiri */
+    animation-direction: alternate-reverse; /* Hati kiri bergerak ke arah yang berlawanan */
+}
+
+#heart-right {
+    right: 20%; /* Posisi hati di kanan */
+}
+
+.love-message {
+    font-size: 2em;
+    color: #d5006d; /* Warna teks */
+    position: relative; /* Agar pesan berada di tengah */
+    z-index: 1; /* Agar pesan berada di atas hati */
+}
+
+@keyframes moveHeart {
+    0% {
+        transform: translateY(0); /* Posisi awal */
+    }
+    50% {
+        transform: translateY(-20px); /* Bergerak ke atas */
+    }
+    100% {
+        transform: translateY(0); /* Kembali ke posisi awal */
+    }
+}
